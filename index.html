@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="descriptions" content="mass meal-list">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section class="wrapper" id="registrar-page">
+            <div class="login-content" id="log-page">
+                <input type="text" class="number-btn" maxlength="11" placeholder="Your Phone Number" id="number-checker">
+                <button class="go-button" id="submit-button">Go</button>
+            </div>
+            <div class="warning" id="warning-page">
+                <h2 class="warning-notice" id="warning-notice"></h2>
+                <div class="time-container">
+                    <h4 class="timing-note">The Page will be opening at..</h4>
+                    <div class="time-box" id="timeBox">
+                        <div class="day">
+                            <h4 class="time-heading">Day</h4>
+                            <div class="time" id="daySee"></div>  
+                        </div>
+                        <div class="hour">
+                            <h4 class="time-heading">Hour</h4>
+                            <div class="time" id="hourSee"></div> 
+                        </div>
+                        <div class="minute">
+                            <h4 class="time-heading">Minute</h4>
+                            <div class="time" id="minuteSee"></div> 
+                        </div>
+                        <div class="second">
+                            <h4 class="time-heading">Second</h4>
+                            <div class="time" id="secondSee"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-wrapper" id="content-wrapper">
+            <div class="front-total" id="child-1">
+                <table class="table-no-1">
+                    <caption><h1 id="member-name">Name</h1></caption>
+                    <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Costing</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td id="running-month-name">May</td>
+                        <td><strong id="running-total-cost">0000</strong>&nbsp;<span>TK</span></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th colspan="2"><h4>This <strong style="color:rgb(212, 43, 13);">TOTAL</strong> is only for living cost.</h4></th>
+                    </tr>
+                    </tfoot>
+                </table>
+                <div class="shift-box">
+                    <button class="shift-button-next" id="details-1">Go Details</button>
+                </div>
+            </div>
+            <div class="back-total" id="child-2">
+                <table class="table-no-1">
+                    <caption><h1>DETAILS</h1></caption>
+                    <thead class="t-heading">
+                    <tr>
+                        <th>Categories</th>
+                        <th></th>
+                        <th>Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody class="t-body">
+                    <tr>
+                        <td>Stay Cost</td>
+                        <td>=</td>
+                        <td id="memberStayCost">00</td>
+                    </tr>
+                    <tr>
+                        <td>Khala's bill</td>
+                        <td>=</td>
+                        <td id="runningKhalaCost">00</td>
+                    </tr>
+                    <tr>
+                        <td>Net's Bill</td>
+                        <td>=</td>
+                        <td id="running-net-cost">00</td>
+                    </tr>
+                    <tr>
+                        <td>Service Cost</td>
+                        <td>=</td>
+                        <td id="running-service-cost">00</td>
+                    </tr>
+                    <tr>
+                        <td>Other Cost</td>
+                        <td>=</td>
+                        <td id="running-other-cost">00</td>
+                    </tr>
+                    <tr>
+                        <td>Previous Dining Get</td>
+                        <td>=</td>
+                        <td id="previous-get-in-dining">00</td>
+                    </tr>
+                    <tr>
+                        <td>Previous Dining Due</td>
+                        <td>=</td>
+                        <td id="previous-due-in-dining">00</td>
+                    </tr>
+                    <tr>
+                        <td>Garage Bill</td>
+                        <td>=</td>
+                        <td id="garage-bill">00</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th></th>
+                        <th><strong id="total-stay-amount"></strong> <span>TK</span></th>
+                    </tr>
+                    </tfoot>
+                </table>
+                <div class="shift-box">
+                    <button class="shift-button-next" id="total-button">Total</button>
+                    <button class="shift-button-next" id="meal-button">Meal</button>
+                </div>
+            </div>
+            <div class="meal-total" id="child-3">
+                <table class="table-no-1">
+                    <caption><h1>Recent Dining</h1></caption>
+                    <thead>
+                    <tr>
+                        <th colspan="3">Categories</th>
+                        <th></th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Meal</th>
+                        <th>Rate</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Dining Cost</td>
+                        <td id="running-meal">0</td>
+                        <td id="running-meal-rate">0</td>
+                        <td>=</td>
+                        <td id="total-dining-amount">1200</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Paid for Dining</td>
+                        <td>=</td>
+                        <td id="paid-for-dining">00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Get in Dining</td>
+                        <td>=</td>
+                        <td id="get-from-dining">00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Due In Dining</td>
+                        <td>=</td>
+                        <td id="due-in-dining">00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Status</td>
+                        <td>=</td>
+                        <td id="dining-status">Get</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th colspan="3"><strong id="status-dining">Remaining</strong></th>
+                        <th><strong id="comment-status"></strong><span>TK</span></th>
+                    </tr>
+                    </tfoot>
+                </table>
+                <div class="shift-box">
+                    <button class="shift-button-next" id="detail-list">Detail</button>
+                    <button class="shift-button-next" id="previous">previous</button>
+                </div>
+            </div>
+            <div class="previous-total" id="child-4">
+                <table class="table-no-1">
+                    <caption><h1> Previous Month</h1></caption>
+                    <thead>
+                    <tr>
+                        <th>Categories</th>
+                        <th></th>
+                        <th>Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Payable</td>
+                        <td>=</td>
+                        <td id="pre-previous-payable">00</td>
+                    </tr>
+                    <tr>
+                        <td>Paid</td>
+                        <td>=</td>
+                        <td id="previous-month-paid">00</td>
+                    </tr>
+                    <tr>
+                        <td>Add Dining</td>
+                        <td>=</td>
+                        <td id="previous-dining-add">100</td>
+                    </tr>
+                    <tr>
+                        <td>Dining Cost</td>
+                        <td>=</td>
+                        <td id="previous-dining-cost">100</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td>=</td>
+                        <td id="previous-deposit-in-dining">100</td>
+                    </tr>
+                    <tr>
+                        <td>DUE</td>
+                        <td>=</td>
+                        <td id="previous-remaining-due">00</td>
+                    </tr>
+
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th colspan="3">
+                            <h4>If any remaining money, that calculated in your current month.</h4>
+                        </th>
+                    </tr>
+                    </tfoot>
+                </table>
+                <div class="shift-box">
+                    <button class="shift-button-next" id="meal-list">Dining</button>
+                    <button class="shift-button-next" id="running-list">Running</button>
+                </div>
+            </div>
+            <div class="running-total" id="child-5">
+                <table class="table-no-1">
+                    <caption><h1>Now Dining Cost</h1></caption>
+                    <thead class="t-heading" style="border: none">
+                    <tr>
+                        <th>Name</th>
+                        <th><p>Meal</p><p>Cost</p></th>
+                        <th><p>Deposit</p><p>Bazar</p></th>
+                        <th>Get</th>
+                        <th>Due</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="01814843266">
+                        <th id="udoy">Name</th>
+                        <td id="udoy-meal-cost">0000</td>
+                        <td id="udoy-paid">0000</td>
+                        <td id="udoy-get" class="meal_get_money"></td>
+                        <td id="udoy-due" class="meal_due_money"></td>
+                    </tr>
+                    <tr id="01922362569">
+                        <th id="razu">Name</th>
+                        <td id="razu-meal-cost">0000</td>
+                        <td id="razu-paid">0000</td>
+                        <td id="razu-get" class="meal_get_money"></td>
+                        <td id="razu-due" class="meal_due_money"></td>
+                    </tr>
+                    <tr id="01532023080">
+                        <th id="sony">Name</th>
+                        <td id="sony-meal-cost">0000</td>
+                        <td id="sony-paid">0000</td>
+                        <td id="sony-get" class="meal_get_money"></td>
+                        <td id="sony-due" class="meal_due_money"></td>
+                    </tr>
+                    <tr id="01794942131">
+                        <th id="maruf">Name</th>
+                        <td id="maruf-meal-cost">0000</td>
+                        <td id="maruf-paid">0000</td>
+                        <td id="maruf-get" class="meal_get_money"></td>
+                        <td id="maruf-due" class="meal_due_money"></td>
+                    </tr>
+                    <tr id="01738393696">
+                        <th id="amrul">Name</th>
+                        <td id="amrul-meal-cost">0000</td>
+                        <td id="amrul-paid">0000</td>
+                        <td id="amrul-get" class="meal_get_money"></td>
+                        <td id="amrul-due" class="meal_due_money"></td>
+                    </tr>
+                    <tr id="01925315230">
+                        <th id="masum">Name</th>
+                        <td id="masum-meal-cost">0000</td>
+                        <td id="masum-paid">0000</td>
+                        <td id="masum-get" class="meal_get_money"></td>
+                        <td id="masum-due" class="meal_due_money"></td>
+                    </tr>
+                    <tr id="01640454889">
+                        <th id="imran">Name</th>
+                        <td id="imran-meal-cost">0000</td>
+                        <td id="imran-paid">0000</td>
+                        <td id="imran-get" class="meal_get_money"></td>
+                        <td id="imran-due" class="meal_due_money"></td>
+                    </tr>
+                    <tr id="01922635500">
+                        <th id="rubel">Name</th>
+                        <td id="rubel-meal-cost">0000</td>
+                        <td id="rubel-paid">0000</td>
+                        <td id="rubel-get" class="meal_get_money"></td>
+                        <td id="rubel-due" class="meal_due_money"></td>
+                    </tr>
+                    <tr id="01400709854">
+                        <th id="rikta">Name</th>
+                        <td id="rikta-meal-cost">0000</td>
+                        <td id="rikta-paid">0000</td>
+                        <td id="rikta-get" class="meal_get_money"></td>
+                        <td id="rikta-due" class="meal_due_money"></td>
+                    </tr>
+                    </tbody>
+                    <tfoot style="display: none">
+                    <tr>
+                        <th colspan="3">Total</th>
+                        <th></th>
+                        <th>100 <span>TK</span></th>
+                    </tr>
+                    </tfoot>
+                </table>
+                <div class="shift-box">
+                    <button class="shift-button-next" id="previous-list">Previous</button>
+                    <div class="clock-button" id="buttonClock">
+                        <div class="clock" id="day"></div><span class="dot">:</span>
+                        <div class="clock" id="month"></div><span class="dot">:</span>
+                        <div class="clock" id="year"></div></div>
+                </div>
+            </div>
+        </section>
+    </div>
+<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
