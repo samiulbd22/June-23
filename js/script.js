@@ -254,7 +254,7 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:"<h2>আপনাকে গত মাসের মিলের বাজার বাবত দিতে হবে <strong>333</strong> টাকা । </h2>"
+        message:"<h2>Oh No!! Wrong typing । </h2>"
     },
 };
         const diningRate    = members.runningMealRate;
