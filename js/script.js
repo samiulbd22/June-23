@@ -2,7 +2,7 @@ const members = {
     khalaBill       :400,
     netBill         :140,
     serviceBill     :30,
-    othersBill      :0,
+    othersBill      :263,
     runningMonth    :"June-23",
     runningMealRate :41,
 
@@ -14,9 +14,9 @@ const members = {
         // running month
         stay_cost       :2200,
         garage_cost     :0,
-        running_payable :0,
-        running_paid    :0,
-        running_meal    :4,
+        running_payable :3375,
+        running_paid    :5000,
+        running_meal    :2,
         // method calling
         previousAddedDining,
         previousDue,
@@ -39,9 +39,9 @@ const members = {
         // running month
         stay_cost       :2330,
         garage_cost     :0,
-        running_payable :0,
+        running_payable :3208,
         running_paid    :0,
-        running_meal    :8,
+        running_meal    :4,
         // method calling
         previousAddedDining,
         previousDue,
@@ -64,9 +64,9 @@ const members = {
         // running month
         stay_cost       :4500,
         garage_cost     :0,
-        running_payable :0,
-        running_paid    :0,
-        running_meal    :4,
+        running_payable :5218,
+        running_paid    :4500,
+        running_meal    :2,
         // method calling
         previousAddedDining,
         previousDue,
@@ -89,9 +89,9 @@ const members = {
         // running month
         stay_cost       :2000,
         garage_cost     :0,
-        running_payable :0,
-        running_paid    :0,
-        running_meal    :4,
+        running_payable :3116,
+        running_paid    :300,
+        running_meal    :2,
         // method calling
         previousAddedDining,
         previousDue,
@@ -114,9 +114,9 @@ const members = {
         // running month
         stay_cost       :3000,
         garage_cost     :0,
-        running_payable :0,
+        running_payable :3298,
         running_paid    :0,
-        running_meal    :1,
+        running_meal    :0,
         // method calling
         previousAddedDining,
         previousDue,
@@ -139,9 +139,9 @@ const members = {
         // running month
         stay_cost       :3000,
         garage_cost     :0,
-        running_payable :0,
+        running_payable :5193,
         running_paid    :0,
-        running_meal    :8,
+        running_meal    :4,
         // method calling
         previousAddedDining,
         previousDue,
@@ -164,9 +164,9 @@ const members = {
         // running month
         stay_cost       :2500,
         garage_cost     :0,
-        running_payable :0,
+        running_payable :2534,
         running_paid    :0,
-        running_meal    :8,
+        running_meal    :4,
         // method calling
         previousAddedDining,
         previousDue,
@@ -188,10 +188,10 @@ const members = {
         previous_dining_cost:2784,
         // running month
         stay_cost       :2500,
-        garage_cost     :0,
-        running_payable :0,
+        garage_cost     :500,
+        running_payable :3950,
         running_paid    :0,
-        running_meal    :8,
+        running_meal    :4,
         // method calling
         previousAddedDining,
         previousDue,
@@ -214,9 +214,9 @@ const members = {
         // running month
         stay_cost       :0,
         garage_cost     :0,
-        running_payable :0,
+        running_payable :1010,
         running_paid    :0,
-        running_meal    :8,
+        running_meal    :4,
         // method calling
         previousAddedDining,
         previousDue,
@@ -254,7 +254,7 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:"<h2>আপনাকে গত মাসের মিলের বাজার বাবত দিতে হবে <strong>317</strong> টাকা । </h2>"
+        message:"<h2>আপনাকে গত মাসের মিলের বাজার বাবত দিতে হবে <strong>333</strong> টাকা । </h2>"
     },
 };
         const diningRate    = members.runningMealRate;
@@ -333,7 +333,7 @@ function runningDueDiningCost(){
 }
 //total amount 
 function totalCost(){
-    return (this.stay_cost + KhalaBill + netBill + serviceBill + otherBill +this.garage_cost +this.previousRemainingDue()) - previuosDiningRefound();
+    return (this.stay_cost + KhalaBill + netBill + serviceBill + otherBill +this.garage_cost +this.previousRemainingDue()) - this.previuosDiningRefound();
 }
 
 const title	        = document.querySelector("title");
@@ -343,7 +343,6 @@ const number        = document.getElementById("number-checker");
 const logPage       = document.getElementById("log-page");
 const warningPage   = document.getElementById("warning-page");
 const warningNotice = document.getElementById("warning-notice");
-let message         = '<p>Oh No!!</p><p>Meal cost of Ramadan is remaining due.</p>';
 
 const clickButton       = document.getElementById("submit-button");
 const registrarPage     = document.getElementById("registrar-page");
@@ -453,16 +452,16 @@ let phoneNumber;
 function numberChecker() {
     phoneNumber = number.value;
     if (
-        (phoneNumber === "01814843266e") ||
-        (phoneNumber === "01922362569e") ||
-        (phoneNumber === "01532023080e") ||
+        (phoneNumber === "01814843266") ||
+        (phoneNumber === "01922362569") ||
+        (phoneNumber === "01532023080") ||
         (phoneNumber === "01821245430e") ||
-        (phoneNumber === "01738393696e") ||
-        (phoneNumber === "01794942131e") ||
-        (phoneNumber === "01640454889e") ||
-        (phoneNumber === "01925315230e") ||
-        (phoneNumber === "01922635500e") ||
-        (phoneNumber === "01400709854e")
+        (phoneNumber === "01738393696") ||
+        (phoneNumber === "01794942131") ||
+        (phoneNumber === "01640454889") ||
+        (phoneNumber === "01925315230") ||
+        (phoneNumber === "01922635500") ||
+        (phoneNumber === "01400709854")
     ){
         button.style.opacity ="1";      
 //total
@@ -490,7 +489,8 @@ dining_status.innerText         = (members[phoneNumber].runningDiningCost() < me
 "GET": "DUE";
 status_dining.innerText     = (members[phoneNumber].runningDiningCost() < members[phoneNumber].runningAddedDining()) ? 
 "GET": "DUE";   
-comment_status.innerText    = (status_dining.innerText ==="GET")? members[phoneNumber].runningRemainingDiningCost():runningDueDiningCost();
+comment_status.innerText    = (status_dining.innerText ==="GET")? get_from_dining.innerText :due_in_dining.innerText;
+
 // previous month
 pre_previous_payable.innerText          = members[phoneNumber].pre_previous_payable;
 previous_month_paid.innerText           = members[phoneNumber].previous_paid;
