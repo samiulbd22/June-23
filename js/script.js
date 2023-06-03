@@ -4,7 +4,7 @@ const members = {
     serviceBill     :30,
     othersBill      :263,
     runningMonth    :"June-23",
-    runningMealRate :41,
+    runningMealRate :67,
 
     "01814843266":{
         name:"Istiaq Ahmad Udoy",
