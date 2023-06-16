@@ -40,7 +40,7 @@ const members = {
         stay_cost       :2330,
         garage_cost     :0,
         running_payable :3208,
-        running_paid    :3000,
+        running_paid    :5000,
         running_meal    :30,
         // method calling
         previousAddedDining,
@@ -465,7 +465,7 @@ function numberChecker() {
         (phoneNumber === "01710430501e") ||
         (phoneNumber === "01738393696") ||
         (phoneNumber === "01794942131e") ||
-        (phoneNumber === "01640454889e") ||
+        (phoneNumber === "01640454889") ||
         (phoneNumber === "01925315230") ||
         (phoneNumber === "01922635500e") ||
         (phoneNumber === "01400709854")
