@@ -54,7 +54,8 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage 
-        message:"<h2>আপনাকে গত মাসের মিলের বাজার বাবত দিতে হবে <strong>45</strong> টাকা । </h2>"
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${208+1680} &nbsp;</strong>TK.</h2>
+        <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
     "01925315230":{
         name:"Masum",
@@ -104,7 +105,8 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:"<h2>আপনাকে গত মাসের মিলের বাজার বাবত দিতে হবে <strong>283</strong> টাকা । </h2>"
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${816+896} &nbsp;</strong>TK.</h2>
+        <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
     "01738393696":{
         name:"Amrul Qais",
@@ -154,7 +156,8 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:"<h2>আপনাকে গত মাসের মিলের বাজার বাবত দিতে হবে <strong>1360</strong> টাকা । </h2>"
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${0+1261} &nbsp;</strong>TK.</h2>
+        <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
     "01400709854":{
         name:"Rikta Islam",
@@ -179,7 +182,8 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:"<h2>আপনি গত মাসের মিলের বাজার বাবত ফিরত পাচ্ছেন <strong>799</strong> টাকা । </h2>"
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${0+50} &nbsp;</strong>TK.</h2>
+        <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
     "01532023080":{
         name:"Sony Hasan",
@@ -204,7 +208,8 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:"<h2>আপনাকে গত মাসের মিলের বাজার বাবত দিতে হবে <strong>117</strong> টাকা । </h2>"
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${0+0} &nbsp;</strong>TK.</h2>
+        <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
     "01922635500":{
         name:"Rubel Hossain",
@@ -229,9 +234,10 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:"<h2>আপনাকে গত মাসের মিলের বাজার বাবত দিতে হবে <strong>317</strong> টাকা । </h2>"
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${0+690} &nbsp;</strong>TK.</h2>
+        <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
-    "01821245430":{
+    "01710430501":{
         name:"Samiul Islam",
         pre_previous_payable:0,
         previous_paid       :0,
@@ -254,7 +260,8 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:"<h2>Oh No!! Wrong typing । </h2>"
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${0+50} &nbsp;</strong>TK.</h2>
+                 <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
 };
         const diningRate    = members.runningMealRate;
@@ -453,14 +460,14 @@ function numberChecker() {
     phoneNumber = number.value;
     if (
         (phoneNumber === "01814843266") ||
-        (phoneNumber === "01922362569") ||
+        (phoneNumber === "01922362569e") ||
         (phoneNumber === "01532023080") ||
-        (phoneNumber === "01821245430e") ||
+        (phoneNumber === "01710430501e") ||
         (phoneNumber === "01738393696") ||
-        (phoneNumber === "01794942131") ||
-        (phoneNumber === "01640454889") ||
+        (phoneNumber === "01794942131e") ||
+        (phoneNumber === "01640454889e") ||
         (phoneNumber === "01925315230") ||
-        (phoneNumber === "01922635500") ||
+        (phoneNumber === "01922635500e") ||
         (phoneNumber === "01400709854")
     ){
         button.style.opacity ="1";      
@@ -658,14 +665,16 @@ if(color_due_9 !== "0"){
             (phoneNumber.length === 11) && "01814843266" ||
             (phoneNumber.length === 11) && "01922362569" ||
             (phoneNumber.length === 11) && "01532023080" ||
-            (phoneNumber.length === 11) && "01821245430" ||
+            (phoneNumber.length === 11) && "01710430501" ||
             (phoneNumber.length === 11) && "01738393696" ||
             (phoneNumber.length === 11) && "01794942131" ||
             (phoneNumber.length === 11) && "01640454889" ||
             (phoneNumber.length === 11) && "01925315230" ||
             (phoneNumber.length === 11) && "01922635500" ||
             (phoneNumber.length === 11) && "01400709854"
-            ){
+            ){  
+                const message_person = document.getElementById("message-person");
+                message_person.innerText= members[phoneNumber].name;
                 warningNotice.innerHTML     = members[phoneNumber].message;
                 logPage.style.display       = "none";
                 warningPage.style.display   = "flex";
@@ -766,7 +775,9 @@ function initializeClock(id,endtime){
 
         if(t.total <=0){
             clearInterval(timeInterval);
+            clock.style.display ="none";
         }
+
     }
     updateClock();
     var timeInterval = setInterval(updateClock, 1000);
