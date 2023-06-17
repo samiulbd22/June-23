@@ -16,7 +16,7 @@ const members = {
         garage_cost     :0,
         running_payable :3375,
         running_paid    :5000,
-        running_meal    :18,
+        running_meal    :19,
         // method calling
         previousAddedDining,
         previousDue,
@@ -41,7 +41,7 @@ const members = {
         garage_cost     :0,
         running_payable :3208,
         running_paid    :5000,
-        running_meal    :30,
+        running_meal    :32,
         // method calling
         previousAddedDining,
         previousDue,
@@ -67,7 +67,7 @@ const members = {
         garage_cost     :0,
         running_payable :5218,
         running_paid    :7000,
-        running_meal    :18,
+        running_meal    :20,
         // method calling
         previousAddedDining,
         previousDue,
@@ -92,7 +92,7 @@ const members = {
         garage_cost     :0,
         running_payable :3116,
         running_paid    :2300,
-        running_meal    :16,
+        running_meal    :17,
         // method calling
         previousAddedDining,
         previousDue,
@@ -105,7 +105,7 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${816+896} &nbsp;</strong>TK.</h2>
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${816+896+56} &nbsp;</strong>TK.</h2>
         <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
     "01738393696":{
@@ -118,7 +118,7 @@ const members = {
         garage_cost     :0,
         running_payable :3298,
         running_paid    :6000,
-        running_meal    :17,
+        running_meal    :19,
         // method calling
         previousAddedDining,
         previousDue,
@@ -143,7 +143,7 @@ const members = {
         garage_cost     :0,
         running_payable :5193,
         running_paid    :5500,
-        running_meal    :28,
+        running_meal    :30,
         // method calling
         previousAddedDining,
         previousDue,
@@ -156,7 +156,7 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${0+1261} &nbsp;</strong>TK.</h2>
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${0+1261+112} &nbsp;</strong>TK.</h2>
         <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
     "01400709854":{
@@ -169,7 +169,7 @@ const members = {
         garage_cost     :0,
         running_payable :2534,
         running_paid    :4200,
-        running_meal    :28,
+        running_meal    :30,
         // method calling
         previousAddedDining,
         previousDue,
@@ -182,7 +182,7 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${0+50} &nbsp;</strong>TK.</h2>
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${14} &nbsp;</strong>TK.</h2>
         <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
     "01532023080":{
@@ -195,7 +195,7 @@ const members = {
         garage_cost     :500,
         running_payable :3950,
         running_paid    :4000,
-        running_meal    :31,
+        running_meal    :33,
         // method calling
         previousAddedDining,
         previousDue,
@@ -221,7 +221,7 @@ const members = {
         garage_cost     :0,
         running_payable :1010,
         running_paid    :2000,
-        running_meal    :30,
+        running_meal    :32,
         // method calling
         previousAddedDining,
         previousDue,
@@ -462,13 +462,13 @@ function numberChecker() {
         (phoneNumber === "01814843266") ||
         (phoneNumber === "01922362569e") ||
         (phoneNumber === "01532023080") ||
-        (phoneNumber === "01710430501e") ||
+        (phoneNumber === "01710430501") ||
         (phoneNumber === "01738393696") ||
         (phoneNumber === "01794942131e") ||
         (phoneNumber === "01640454889") ||
         (phoneNumber === "01925315230") ||
         (phoneNumber === "01922635500e") ||
-        (phoneNumber === "01400709854")
+        (phoneNumber === "01400709854e")
     ){
         button.style.opacity ="1";      
 //total
