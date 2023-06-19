@@ -234,7 +234,7 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${0+690+112+112} &nbsp;</strong>TK.</h2>
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${1026} &nbsp;</strong>TK.</h2>
         <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
     "01710430501":{
