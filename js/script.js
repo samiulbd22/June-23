@@ -220,7 +220,7 @@ const members = {
         stay_cost       :0,
         garage_cost     :0,
         running_payable :1010,
-        running_paid    :2000,
+        running_paid    :3000,
         running_meal    :46,
         // method calling
         previousAddedDining,
@@ -234,7 +234,7 @@ const members = {
         runningDueDiningCost,
         totalCost,
         //memberMessage
-        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${1474+112} &nbsp;</strong>TK.</h2>
+        message:`<h2>Running due &nbsp;<strong style='color:red; font-weight: 600;'>${474+112} &nbsp;</strong>TK.</h2>
         <p>If this due doesn't clear before Eid-ul-Adha you couldn't run your dining before 10<sup>th</sup> July</p>`
     },
     "01710430501":{
