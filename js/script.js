@@ -195,7 +195,7 @@ const members = {
         garage_cost     :500,
         running_payable :3950,
         running_paid    :6000,
-        running_meal    :44,
+        running_meal    :43,
         // method calling
         previousAddedDining,
         previousDue,
@@ -742,8 +742,8 @@ function dateClock(){
     document.getElementById("month").innerText  = myMonth[month];
     document.getElementById("year").innerText   = year;
 	if (startDate > endDate){
-        document.getElementById("day").innerText    = 00;
-        document.getElementById("month").innerText  = 00;
+        document.getElementById("day").innerText    = 0;
+        document.getElementById("month").innerText  = 0;
         document.getElementById("year").innerText   = year;
     }
     
