@@ -741,6 +741,11 @@ function dateClock(){
     document.getElementById("day").innerText    = day;
     document.getElementById("month").innerText  = myMonth[month];
     document.getElementById("year").innerText   = year;
+	if (startDate < endDate){
+        document.getElementById("day").innerText    = 0;
+        document.getElementById("month").innerText  = 0;
+        document.getElementById("year").innerText   = year;
+    }
     
 }
 dateClock();
