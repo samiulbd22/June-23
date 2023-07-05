@@ -733,7 +733,7 @@ function previousListShowMe() {
 
 function dateClock(){
     const startDate     = new Date();
-    const endDate       = new Date("June 30,20231");
+    const endDate       = new Date("June 30,2023");
     const day           = startDate.getDate();
     const month         = startDate.getMonth();
     const year          = startDate.getFullYear();
@@ -741,9 +741,9 @@ function dateClock(){
     document.getElementById("day").innerText    = day;
     document.getElementById("month").innerText  = myMonth[month];
     document.getElementById("year").innerText   = year;
-	if (startDate < endDate){
-        document.getElementById("day").innerText    = 0;
-        document.getElementById("month").innerText  = 0;
+	if (startDate > endDate){
+        document.getElementById("day").innerText    = 00;
+        document.getElementById("month").innerText  = 00;
         document.getElementById("year").innerText   = year;
     }
     
